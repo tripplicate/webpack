@@ -67,9 +67,16 @@ let config =  {
             },
             {
                 test: /\.svg$/,
-                type: 'asset/inline',
-                generator: {
-                    filename: 'assets/svg/[contenthash][ext][query]'
+                loader: "file-loader",
+                options: {
+                    name: "assets/svg/[contenthash].[ext]"
+                }
+            },
+            {
+                test: /\.(mp3|mp4)$/,
+                loader: "file-loader",
+                options: {
+                    name: "assets/music/[contenthash].[ext]"
                 }
             },
         ]
