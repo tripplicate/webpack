@@ -10,11 +10,6 @@
             |-- index.js
 
 
-
-### Configuration
-
-All options are in `webpack` folder
-
 ### Proxy
 
 Default froxy: `http://localhost:8081`
