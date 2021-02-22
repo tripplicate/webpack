@@ -75,6 +75,18 @@ module.exports = {
                   ],
             },
             {
+                test: /\.(mp3|mp4)$/i,
+                use: [
+                    {
+                      loader: 'file-loader',
+                      options: {
+                        publicPath: '../',
+                        name: `assets/audio/[contenthash].[ext]`,
+                      },
+                    },
+                  ],
+            },
+            {
                 test: /\.(woff(2)?|eot|ttf|otf)$/,
                 use: [
                     {
